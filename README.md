@@ -37,4 +37,4 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 
 ## App
 
-<img src="https://photos.app.goo.gl/ThrjKb6TQLokhPfB7" />
+<img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-48-40.png" />
