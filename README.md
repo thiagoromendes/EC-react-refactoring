@@ -34,3 +34,7 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 - Usar hooks customizados para manipular dados do formulário
 - Segmentar componentes da página de formulário
 - Usar lib para registrar e validar elementos do formulário
+
+## App
+
+<img src="https://photos.app.goo.gl/ThrjKb6TQLokhPfB7" />
