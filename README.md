@@ -38,3 +38,7 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 ## App
 
 <img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-48-40.png" />
+
+### Selecione o formulário (Refatorado ou Não refatorado)
+
+<img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-49-00.png" />
