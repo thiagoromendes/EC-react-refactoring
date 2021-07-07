@@ -18,7 +18,7 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 
 - React com framework de design (Material UI)
 - Componentes criados com classe
-- Formulário extenso com diferentes tipos de inputs e níveis de estrutura de dados
+- Formulário com vários campos de input
 - Componentes de input expostos na página de formulário
 - Componentes controlados
 - Lógica de validação exposta no código de formulário
@@ -34,3 +34,13 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 - Usar hooks customizados para manipular dados do formulário
 - Segmentar componentes da página de formulário
 - Usar lib para registrar e validar elementos do formulário
+
+### App - Selecione o formulário
+<img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-49-00.png" />
+
+### Refatorado
+<img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-48-40.png" />
+
+### Não refatorado
+<img src="https://github.com/thiagoromendes/thiagoromendes/blob/upload-images/Captura%20de%20tela%20de%202021-07-05%2013-49-18.png" />
+
