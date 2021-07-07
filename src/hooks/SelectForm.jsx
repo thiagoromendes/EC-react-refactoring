@@ -4,7 +4,7 @@ const SelectFormContext = createContext();
 
 export function SelectFormProvider({children}){
 
-    const [selectForm, setSelectForm] = useState('refactored');
+    const [selectForm, setSelectForm] = useState('content');
 
     const select = (option) => {
         setSelectForm(option)

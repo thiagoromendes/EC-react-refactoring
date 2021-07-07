@@ -18,4 +18,10 @@ export const useStyles = makeStyles((theme) => ({
     submit: {
       margin: theme.spacing(3, 0, 2),
     },
+    table: {
+      minWidth: 900,
+    },
+    title: {
+      marginBottom: 20
+    }
   }));

@@ -3,15 +3,13 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-
-const api = () => {
-  console.log('Api conectada ao Mock')
-}
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import styled from 'styled-components';
+import {v4 as uuid} from 'uuid'
+import api from '../service/api';
 
 const ContainerForm = styled.div`
   margin-top: 72px;
@@ -27,6 +25,7 @@ const Form = styled.form`
 
 export class UnrefactoredForm extends React.Component {
   state = {
+    id: uuid(),
     firstName: '',
     lastName: '',
     email: '',
@@ -34,11 +33,20 @@ export class UnrefactoredForm extends React.Component {
     password: ''
   }
 
-  _save = async () => {
+  _save = async (e) => {  
     if(!this._requiredFieldsFilled())   {
+      e.preventDefault(); 
       alert('Todos os campos devem ser preenchidos')
     } else {
-      await api.post('/save', this.state)
+      await api.post('/form', this.state)
+      this.setState({
+        id: uuid(),
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        password: ''
+      })
     }
 
   }
@@ -122,7 +130,7 @@ export class UnrefactoredForm extends React.Component {
                   }
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={false}>
                 <TextField
                   variant="outlined"
                   required
@@ -136,7 +144,7 @@ export class UnrefactoredForm extends React.Component {
                   }
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={false}>
                 <TextField
                   variant="outlined"
                   required
@@ -150,7 +158,7 @@ export class UnrefactoredForm extends React.Component {
                   }
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={false}>
                 <TextField
                   variant="outlined"
                   required
@@ -172,6 +180,7 @@ export class UnrefactoredForm extends React.Component {
               fullWidth
               variant="contained"
               color="primary"
+              onClick={(e) => this._save(e)}
               mt={3}
             >
               Cadastrar

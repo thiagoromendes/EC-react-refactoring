@@ -2,8 +2,8 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import {AppProvider} from '../src/hooks'
 import {GlobalStyle} from '../src/styles/GlobalStyle';
-import {AppBar} from './components/AppBar';
-import {Form}  from '../src/pages/Form';
+import {AppBar} from './components/AppBar/index';
+import {Portal}  from '../src/pages/Portal';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <GlobalStyle />
       <AppProvider>
         <AppBar />
-        <Form />
+        <Portal />
       </AppProvider>
     </Container>
   );
