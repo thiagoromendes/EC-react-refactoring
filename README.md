@@ -18,7 +18,7 @@ Nesse vídeo iremos adotar algumas estratégias para tornar o código mais atual
 
 - React com framework de design (Material UI)
 - Componentes criados com classe
-- Formulário extenso com diferentes tipos de inputs e níveis de estrutura de dados
+- Formulário com vários campos de input
 - Componentes de input expostos na página de formulário
 - Componentes controlados
 - Lógica de validação exposta no código de formulário
