@@ -33,20 +33,11 @@ export class UnrefactoredForm extends React.Component {
     password: ''
   }
 
-  _save = async (e) => {  
+  _save = async () => {  
     if(!this._requiredFieldsFilled())   {
-      e.preventDefault(); 
       alert('Todos os campos devem ser preenchidos')
     } else {
       await api.post('/form', this.state)
-      this.setState({
-        id: uuid(),
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        password: ''
-      })
     }
 
   }
@@ -99,7 +90,9 @@ export class UnrefactoredForm extends React.Component {
           <Typography component="h1" variant="h5">
               Unrefactored Form
           </Typography>
-          <Form noValidate>
+          <Form 
+            onSubmit={this._save}
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -180,7 +173,6 @@ export class UnrefactoredForm extends React.Component {
               fullWidth
               variant="contained"
               color="primary"
-              onClick={(e) => this._save(e)}
               mt={3}
             >
               Cadastrar

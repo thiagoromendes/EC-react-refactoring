@@ -5,6 +5,7 @@ import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt'
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 
 export function GenericHeader(props){
+    
     return(
             <>
             <Avatar className={props.className}>

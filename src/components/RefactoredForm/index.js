@@ -1,20 +1,17 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import {useForm} from 'react-hook-form'
+import {useConfigForm} from '../../hooks/ConfigForm';
 import {useStyles} from './styles'
 import {GenericHeader} from '../GenericHeader';
-import {GenericTextField} from '../GenericTextField';
+import {GenericForm} from '../GenericForm';
 import {configTextField} from './config';
-import api from '../../service/api';
 
 export function RefactoredForm() {
 
-  const {register, handleSubmit, formState: {errors}} = useForm();
-  const classes = useStyles();
+  const {config} = useConfigForm();
+  config(configTextField);
 
-  const onSubmit = handleSubmit(data => api.post('/form', data));
+  const classes = useStyles();
 
   return (
     <Container 
@@ -27,32 +24,10 @@ export function RefactoredForm() {
           icon="smile"
           title="Refactored Form"
         />
-        <form 
-          onSubmit={onSubmit}
-          className={classes.form} 
-          noValidate
-        >
-          <Grid container spacing={2}>
-            <GenericTextField 
-              config={configTextField}
-              firstName={{...register("firstName")}}
-              lastName={{...register("lastName")}}
-              email={{...register("email")}}
-              phone={{...register("phone")}}
-              password={{...register("password")}}
-              errors={{errors}}
-            />
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Cadastrar
-          </Button>
-        </form>
+        <GenericForm 
+          classNameForm={classes.form}
+          classNameButton={classes.submit}
+        />
     </Container>
   );
 }
