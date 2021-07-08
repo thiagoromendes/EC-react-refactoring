@@ -9,7 +9,7 @@ import api from '../../service/api';
 export function GenericForm(props){
 
     const {configForm} = useConfigForm()
-    const {register, handleSubmit, formState: {errors}} = useForm();
+    const {register, handleSubmit} = useForm();
     
     configForm.map(conf => conf.register = {...register(conf.name)});
 
@@ -25,7 +25,6 @@ export function GenericForm(props){
           <Grid container spacing={2}>
             <GenericTextField
               config={configForm} 
-              errors={{errors}}
             />
           </Grid>
           <Button
