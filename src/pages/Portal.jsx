@@ -1,7 +1,6 @@
 import React from 'react';
 import {useSelectForm} from '../hooks/SelectForm';
 import {UnrefactoredForm} from '../components/UnrefactoredForm';
-import {RefactoredForm} from '../components/RefactoredForm';
 import {ContentRecord} from '../components/ContentRecord';
 
 export function Portal(){
@@ -15,10 +14,7 @@ export function Portal(){
             }
             {selectForm === 'unrefactored' &&
                 <UnrefactoredForm />
-            }
-            {selectForm === 'refactored' &&
-                <RefactoredForm />
-            }           
+            }         
         </>
     )
 }
